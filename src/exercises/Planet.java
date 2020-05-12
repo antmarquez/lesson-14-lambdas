@@ -7,13 +7,27 @@ public class Planet {
 	private double volume; // Relative to Earth which is 1.0
 	private int satellites;
 	
-	public Planet(String name, int distanceFromSun, double volume,
-			int satellites) {
+	public Planet(String name, int distanceFromSun, double volume, int satellites) {
 		super();
 		this.name = name;
 		this.distanceFromSun = distanceFromSun;
 		this.volume = volume;
 		this.satellites = satellites;
 	}
-	
+	public int getDistanceFromSun() {
+		return distanceFromSun;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getVolume() {
+		return volume;
+	}
+
+	public String toString() {
+		return "\n" + this.name + " - " + distanceFromSun + " million km far from the Sun; " + volume + " volume";
+	}
+
 }
